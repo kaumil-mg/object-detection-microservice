@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  ai_backend:
+    build: ./ai_backend
+    container_name: ai_backend
+    ports:
+      - "5001:5001"
+    networks:
+      - backend
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - ui_backend
+
+  ui_backend:
+    build: ./ui_backend
+    container_name: ui_backend
+    ports:
+      - "5000:5000"
+    networks:
+      - backend
+    environment:
+      - PYTHONUNBUFFERED=1
+
+networks:
+  backend:
+    driver: bridge
