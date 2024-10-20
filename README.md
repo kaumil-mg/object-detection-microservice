@@ -39,7 +39,7 @@ Before you begin, make sure you have the following installed on your system:
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/object-detection-microservice.git
+git clone https://github.com/kaumil-mg/object-detection-microservice.git
 cd object-detection-microservice
 
 #### 2. Set Up the Virtual Environment 
